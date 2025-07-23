@@ -1,5 +1,45 @@
-export default function Page(){
-    return (
-        <div>aaaaaaa</div>
-    )
+export default function Page() {
+  return (
+    <>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+      <div className="text-white">aaaaaaa</div>
+    </>
+  )
 }
