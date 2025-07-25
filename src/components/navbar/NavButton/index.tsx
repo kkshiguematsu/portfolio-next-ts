@@ -64,8 +64,8 @@ export const NavButton = ({ links }: NavButtonProps) => {
           </div>
         </button>
       </div>
-      <div className={clsx(baseBackdropClasses, variantsBackdropClasses[isMenuOpen ? 'open' : 'closed'])}>
-        <div className={clsx(baseDivListClasses, variantsDivListClasses[isMenuOpen ? 'open' : 'closed'])}>
+      <div className={clsx(baseBackdropClasses, variantsBackdropClasses[isMenuOpen ? 'open' : 'closed'])} onClick={() => setIsMenuOpen(false)}>
+        <div className={clsx(baseDivListClasses, variantsDivListClasses[isMenuOpen ? 'open' : 'closed'])} onClick={(e) => e.stopPropagation()}>
           {links.map((link) => (
             <a key={link.href} className={clsx(baseLinkClasses, activeHash === link.href.replace('/', '') && 'bg-blue-500 text-white')} href={link.href}>
               {link.label}
