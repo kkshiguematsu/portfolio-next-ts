@@ -1,6 +1,6 @@
-import Navbar from '@components/Navbar'
 import './globals.css'
-import { HeroSection } from '@components/HeroSection'
+import { HeroSection } from '@components/sections/heroPage'
+import { NavManager } from '@components/navbar/NavManager'
 
 export default function Layout({
   children,
@@ -9,12 +9,9 @@ export default function Layout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-[#1e1d20] box-border relative">
-        <Navbar />
-        <main className="relative w-full min-h-screen m-auto text-white flex items-center justify-center">
-          <HeroSection />
-        </main>
-        {children}
+      <body className="relative box-border bg-[#1e1d20]">
+        <NavManager />
+        <main className="relative m-auto flex min-h-screen w-full flex-col items-center justify-center text-white">{children}</main>
       </body>
     </html>
   )
