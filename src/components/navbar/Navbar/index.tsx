@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { animate, createScope } from 'animejs'
 import clsx from 'clsx'
-import { navBasesClasses, navButtonClasses, navDivBasesClasses, navDivBasesVariants, navVariants } from './tailwind'
+import { navBasesClasses, navButtonClasses, navDivBasesClasses, navVariants } from './tailwind'
 
 interface NavbarProps {
   links: { href: string; label: string }[]
@@ -18,16 +18,21 @@ export default function Navbar({ links }: NavbarProps) {
       const scrollY = window.scrollY
       const currentVariant = scrollY > 1 ? 'scrolled' : 'top'
 
-      if (navRef.current) {
-        animate(navRef.current, {
-          width: currentVariant === 'scrolled' ? '20%' : '100%',
-          duration: 300,
-          easing: 'easeOutExpo',
-          complete: () => {
-            setVariant(currentVariant)
-          },
-        })
-      }
+      if (!navRef.current) return
+
+      const targetWidth = currentVariant === 'scrolled' ? 460 : navRef.current.parentElement?.offsetWidth || window.innerWidth
+
+      // Define a largura atual antes de animar (evita pulo)
+      navRef.current.style.width = `${navRef.current.offsetWidth}px`
+
+      animate(navRef.current, {
+        width: targetWidth,
+        duration: 50,
+        // easing: 'easeInOutQuad',
+        complete: () => {
+          setVariant(currentVariant)
+        },
+      })
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -37,8 +42,8 @@ export default function Navbar({ links }: NavbarProps) {
   }, [variant])
 
   return (
-    <nav id="nav" ref={navRef} style={{ width: '100%' }} className={clsx(navBasesClasses, navVariants[variant])}>
-      <div className={clsx(navDivBasesClasses, navDivBasesVariants[variant])}>
+    <nav id="nav" ref={navRef} style={{ width: '100%' }} className={clsx('box-border', navBasesClasses, navVariants[variant])}>
+      <div className={clsx(navDivBasesClasses)}>
         {links.map((link) => (
           <a key={link.href} className={navButtonClasses} href={link.href}>
             {link.label}

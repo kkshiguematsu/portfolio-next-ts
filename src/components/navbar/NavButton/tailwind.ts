@@ -10,10 +10,10 @@ export const variantsBackdropClasses = {
   closed: 'opacity-0 invisible',
 }
 
-export const baseDivListClasses = 'absolute w-[90%] left-4 top-20 flex flex-col gap-2 rounded-lg bg-neutral-700/30 p-3 text-white transition-all duration-300 ease-in-out'
+export const baseDivListClasses = 'absolute w-[90%] left-1/2 top-20 flex flex-col gap-2 rounded-lg bg-neutral-700/30 p-3 text-white transition-all duration-300 ease-in-out'
 export const variantsDivListClasses = {
-  open: 'opacity-100 translate-x-0 pointer-events-auto visible',
-  closed: 'opacity-0 -translate-x-24 pointer-events-none invisible',
+  open: 'opacity-100 -translate-x-1/2 pointer-events-auto visible',
+  closed: 'opacity-0 -translate-x-[100vw] pointer-events-none invisible',
 }
 
 export const baseLinkClasses = 'text-white text-lg p-3 transition-colors duration-300 rounded-lg hover:bg-blue-500 active:bg-blue-500'
